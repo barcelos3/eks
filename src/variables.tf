@@ -1,3 +1,10 @@
+variable "project_name" {
+  type        = string
+  description = "Project name"
+  default     = "eks-infra"
+
+}
+
 variable "vpc" {
   description = "values for the vpc"
   default = {
@@ -61,7 +68,7 @@ variable "alb" {
   default = {
     HML = {}
     PRD = {
-      name                 = "desafio-load-balancer"
+      name                 = "alb-eks-infra"
       target_name          = "test"
       target_port          = 80
       target_protocol      = "HTTP"

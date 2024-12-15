@@ -33,3 +33,12 @@ output "alb_arn" {
   value       = module.alb.arn
 }
 
+output "eks_name" {
+  description = "value of the eks name"
+  value       = aws_eks_cluster.eks.name
+}
+
+output "node_group_name" {
+  description = "value of the node group name"
+  value       = aws_eks_node_group.private-nodes.node_group_name
+}
