@@ -6,7 +6,7 @@ module "vpc" {
   cidr               = var.vpc[terraform.workspace].cidr_block
   enable_dns_support = var.vpc[terraform.workspace].enable_dns
 
-  azs             = [for i in var.subnet[terraform.workspace].multi_az : "${data.aws_region.current.name}-${i}"]
+  azs             = [for i in var.subnet[terraform.workspace].multi_az : i]
   private_subnets = [for i in var.subnet[terraform.workspace].private.cidr_block : i]
   public_subnets  = [for i in var.subnet[terraform.workspace].public.cidr_block : i]
 
@@ -25,5 +25,6 @@ module "vpc" {
   tags = {
     TERRAFORM   = lower("true")
     ENVIRONMENT = lower(terraform.workspace)
+    PRODUCT     = "infra-network"
   }
 }

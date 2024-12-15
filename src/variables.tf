@@ -25,7 +25,7 @@ variable "subnet" {
   default = {
     HML = {}
     PRD = {
-      multi_az = ["az1", "az2", "az3"]
+      multi_az = ["use1-az1", "use1-az2", "use1-az3"]
       public = {
         cidr_block       = ["10.0.101.0/24", "10.0.102.0/24"]
         route_table_name = "public-rt"
