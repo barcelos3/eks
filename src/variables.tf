@@ -25,16 +25,18 @@ variable "subnet" {
   default = {
     HML = {}
     PRD = {
-      region = ["use1-az1", "use1-az2", "use1-az3"]
+      multi_az = ["az1", "az2", "az3"]
       public = {
-        name             = "sub-public"
         cidr_block       = ["10.0.101.0/24", "10.0.102.0/24"]
         route_table_name = "public-rt"
+        pip_on_launch    = true
+        public_elb       = 1
       }
       private = {
-        name             = "sub-pvt"
         cidr_block       = ["10.0.1.0/24", "10.0.2.0/24"]
         route_table_name = "private-rt"
+        pip_on_launch    = false
+        internal_elb     = 1
       }
     }
   }
