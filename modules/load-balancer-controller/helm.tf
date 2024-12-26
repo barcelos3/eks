@@ -7,7 +7,7 @@ resource "helm_release" "eks_helm_controller" {
 
   set {
     name  = "clusterName"
-    value = var.cluster_name
+    value = var.eks_cluster_name
   }
 
   set {

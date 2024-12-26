@@ -39,7 +39,7 @@ output "oidc" {
 
 output "eks_name" {
   description = "value of the eks name"
-  value       = module.eks_cluster.cluster_name
+  value       = module.eks_cluster.eks_cluster_name
 }
 
 output "node_group_name" {
@@ -48,5 +48,16 @@ output "node_group_name" {
 }
 
 output "cluster_endpoint" {
-  value = module.eks_cluster.cluster_endpoint
+  description = "value of the cluster endpoint"
+  value       = module.eks_cluster.cluster_endpoint
+}
+
+output "cluster_arn" {
+  description = "value of the cluster arn"
+  value       = module.eks_cluster.cluster_arn
+}
+
+output "ecr_name" {
+  description = "value of the ecr name"
+  value       = module.ecr.ecr_name
 }

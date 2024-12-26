@@ -3,7 +3,7 @@ variable "project_name" {
   description = "Project name"
 }
 
-variable "cluster_name" {
+variable "eks_cluster_name" {
   type        = string
   description = "Name of the EKS cluster"
 }

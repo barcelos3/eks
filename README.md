@@ -17,7 +17,8 @@
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_alb"></a> [alb](#module\_alb) | ../modules/alb | n/a |
-| <a name="module_eks_cluster"></a> [eks\_cluster](#module\_eks\_cluster) | ../modules/cluster | n/a |
+| <a name="module_ecr"></a> [ecr](#module\_ecr) | ../modules/ecr | n/a |
+| <a name="module_eks_cluster"></a> [eks\_cluster](#module\_eks\_cluster) | ../modules/eks | n/a |
 | <a name="module_load_balancer_controller"></a> [load\_balancer\_controller](#module\_load\_balancer\_controller) | ../modules/load-balancer-controller | n/a |
 | <a name="module_managed_node_group"></a> [managed\_node\_group](#module\_managed\_node\_group) | ../modules/managed-node-group | n/a |
 | <a name="module_vpc"></a> [vpc](#module\_vpc) | terraform-aws-modules/vpc/aws | n/a |
@@ -46,7 +47,9 @@
 | <a name="output_alb_arn"></a> [alb\_arn](#output\_alb\_arn) | value of the alb arn |
 | <a name="output_alb_dns_name"></a> [alb\_dns\_name](#output\_alb\_dns\_name) | value of the alb dns name |
 | <a name="output_alb_name"></a> [alb\_name](#output\_alb\_name) | value of the alb name |
-| <a name="output_cluster_endpoint"></a> [cluster\_endpoint](#output\_cluster\_endpoint) | n/a |
+| <a name="output_cluster_arn"></a> [cluster\_arn](#output\_cluster\_arn) | value of the cluster arn |
+| <a name="output_cluster_endpoint"></a> [cluster\_endpoint](#output\_cluster\_endpoint) | value of the cluster endpoint |
+| <a name="output_ecr_name"></a> [ecr\_name](#output\_ecr\_name) | value of the ecr name |
 | <a name="output_eks_name"></a> [eks\_name](#output\_eks\_name) | value of the eks name |
 | <a name="output_node_group_name"></a> [node\_group\_name](#output\_node\_group\_name) | value of the node group name |
 | <a name="output_oidc"></a> [oidc](#output\_oidc) | n/a |

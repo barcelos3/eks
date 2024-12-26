@@ -1,5 +1,5 @@
 resource "aws_iam_role" "eks_mng_role" {
-  name = "${var.project_name}-cluster-role"
+  name = "${var.project_name}-eks-managed-node-group-role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
