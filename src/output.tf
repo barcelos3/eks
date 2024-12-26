@@ -33,11 +33,6 @@ output "alb_arn" {
   value       = module.alb.arn
 }
 
-output "eks_vpc_config" {
-  description = "value of the eks vpc config"
-  value       = module.eks_cluster.eks_vpc_config
-}
-
 output "oidc" {
   value = module.eks_cluster.oidc
 }
@@ -50,4 +45,8 @@ output "eks_name" {
 output "node_group_name" {
   description = "value of the node group name"
   value       = module.managed_node_group.managed_node_group_name
+}
+
+output "cluster_endpoint" {
+  value = module.eks_cluster.cluster_endpoint
 }

@@ -1,5 +1,5 @@
 resource "aws_iam_role" "eks_mng_role" {
-  name = "${var.node_group_name}-cluster-role"
+  name = "${var.project_name}-cluster-role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -18,7 +18,7 @@ resource "aws_iam_role" "eks_mng_role" {
   tags = merge(
     var.tags,
     {
-      "Name" = "${var.node_group_name}-mng-role"
+      "Name" = "${var.project_name}-mng-role"
     }
   )
 }

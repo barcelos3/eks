@@ -25,3 +25,9 @@ variable "endpoint_public_access" {
   description = "Indicates whether or not the Amazon EKS public API server endpoint is enabled"
   default     = true
 }
+
+variable "eks_version" {
+  type        = string
+  description = "EKS version"
+  default     = "1.31"
+}

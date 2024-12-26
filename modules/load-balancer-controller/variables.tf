@@ -1,0 +1,20 @@
+variable "project_name" {
+  type        = string
+  description = "Project name"
+}
+
+variable "tags" {
+  type        = map(any)
+  description = "Tags to be added to AWS resources"
+  default     = null
+}
+
+variable "oidc" {
+  type        = string
+  description = "HTTPS URL from OIDC provider of the EKS cluster"
+}
+
+variable "cluster_name" {
+  type        = string
+  description = "Name of the EKS cluster"
+}

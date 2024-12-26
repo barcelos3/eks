@@ -1,4 +1,4 @@
-variable "node_group_name" {
+variable "project_name" {
   type        = string
   description = "Project name"
 }
