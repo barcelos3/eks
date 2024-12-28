@@ -34,6 +34,7 @@ output "alb_arn" {
 }
 
 output "oidc" {
+  description = "value of the oidc endpoint"
   value = module.eks_cluster.oidc
 }
 
