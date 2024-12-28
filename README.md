@@ -53,7 +53,7 @@
 | <a name="output_eks_name"></a> [eks\_name](#output\_eks\_name) | value of the eks name |
 | <a name="output_eks_security_group_id"></a> [eks\_security\_group\_id](#output\_eks\_security\_group\_id) | value of the security group id |
 | <a name="output_node_group_name"></a> [node\_group\_name](#output\_node\_group\_name) | value of the node group name |
-| <a name="output_oidc"></a> [oidc](#output\_oidc) | n/a |
+| <a name="output_oidc"></a> [oidc](#output\_oidc) | value of the oidc endpoint |
 | <a name="output_subnets"></a> [subnets](#output\_subnets) | value of the subnet ids |
 | <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | value of the vpc id |
 | <a name="output_vpc_security_group_ids"></a> [vpc\_security\_group\_ids](#output\_vpc\_security\_group\_ids) | value of the security group ids |
