@@ -22,6 +22,7 @@ module "load_balancer_controller" {
   project_name     = "${var.project_name}-${terraform.workspace}"
   eks_cluster_name = module.eks_cluster.eks_cluster_name
   oidc             = module.eks_cluster.oidc
+  vpc_id           = module.vpc.vpc_id
   tags             = local.tags
 }
 

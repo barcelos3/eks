@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "5.80.0"
+      version = "5.82.2"
     }
     kubernetes = {
       source  = "hashicorp/kubernetes"
@@ -16,27 +16,20 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region  = "us-east-1"
+  profile = "Kroton-DevOps-HML"
 }
 
 provider "kubernetes" {
   host                   = module.eks_cluster.cluster_endpoint
   cluster_ca_certificate = base64decode(module.eks_cluster.cluster_certificate_authority)
-  exec {
-    api_version = "client.authentication.k8s.io/v1beta1"
-    args        = ["eks", "get-token", "--cluster-name", module.eks_cluster.eks_cluster_name]
-    command     = "aws"
-  }
+  token                  = module.eks_cluster.cluster_auth_token
 }
 
 provider "helm" {
   kubernetes {
     host                   = module.eks_cluster.cluster_endpoint
     cluster_ca_certificate = base64decode(module.eks_cluster.cluster_certificate_authority)
-    exec {
-      api_version = "client.authentication.k8s.io/v1beta1"
-      args        = ["eks", "get-token", "--cluster-name", module.eks_cluster.eks_cluster_name]
-      command     = "aws"
-    }
+    token                  = module.eks_cluster.cluster_auth_token
   }
 }

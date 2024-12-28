@@ -1,4 +1,4 @@
-output "security_group_ids" {
+output "vpc_security_group_ids" {
   description = "value of the security group ids"
   value       = aws_security_group.sg[*].id
 }
@@ -60,4 +60,9 @@ output "cluster_arn" {
 output "ecr_name" {
   description = "value of the ecr name"
   value       = module.ecr.ecr_name
+}
+
+output "eks_security_group_id" {
+  description = "value of the security group id"
+  value       = module.eks_cluster.security_group_id
 }

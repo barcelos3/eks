@@ -2,7 +2,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 5.80.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 5.82.2 |
 | <a name="requirement_helm"></a> [helm](#requirement\_helm) | 2.17.0 |
 | <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | 2.35.1 |
 
@@ -10,7 +10,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.80.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.82.2 |
 
 ## Modules
 
@@ -27,8 +27,8 @@
 
 | Name | Type |
 |------|------|
-| [aws_security_group.sg](https://registry.terraform.io/providers/hashicorp/aws/5.80.0/docs/resources/security_group) | resource |
-| [aws_region.current](https://registry.terraform.io/providers/hashicorp/aws/5.80.0/docs/data-sources/region) | data source |
+| [aws_security_group.sg](https://registry.terraform.io/providers/hashicorp/aws/5.82.2/docs/resources/security_group) | resource |
+| [aws_region.current](https://registry.terraform.io/providers/hashicorp/aws/5.82.2/docs/data-sources/region) | data source |
 
 ## Inputs
 
@@ -51,8 +51,9 @@
 | <a name="output_cluster_endpoint"></a> [cluster\_endpoint](#output\_cluster\_endpoint) | value of the cluster endpoint |
 | <a name="output_ecr_name"></a> [ecr\_name](#output\_ecr\_name) | value of the ecr name |
 | <a name="output_eks_name"></a> [eks\_name](#output\_eks\_name) | value of the eks name |
+| <a name="output_eks_security_group_id"></a> [eks\_security\_group\_id](#output\_eks\_security\_group\_id) | value of the security group id |
 | <a name="output_node_group_name"></a> [node\_group\_name](#output\_node\_group\_name) | value of the node group name |
 | <a name="output_oidc"></a> [oidc](#output\_oidc) | n/a |
-| <a name="output_security_group_ids"></a> [security\_group\_ids](#output\_security\_group\_ids) | value of the security group ids |
 | <a name="output_subnets"></a> [subnets](#output\_subnets) | value of the subnet ids |
 | <a name="output_vpc_id"></a> [vpc\_id](#output\_vpc\_id) | value of the vpc id |
+| <a name="output_vpc_security_group_ids"></a> [vpc\_security\_group\_ids](#output\_vpc\_security\_group\_ids) | value of the security group ids |

@@ -37,5 +37,4 @@ override.tf.json
 terraform.rc
 .terraform.lock.hcl
 .terraform
-.infracost/pricing.gob
-.infracost/terraform_modules/manifest-25d902c24283ab8cfbac54dfa101ad31.json
+.infracost
